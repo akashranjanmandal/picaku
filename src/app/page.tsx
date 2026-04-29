@@ -10,21 +10,24 @@ import UnderstandsEverything from "@/components/UnderstandsEverything";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
+import Preloader from "@/components/Preloader";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
-    <SmoothScroll>
-      <Navbar />
-      <Hero />
-      <StartsWithYou />
-      <DailyIntelligence />
-      <OnDemand />
-      <UnderstandsEverything />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </SmoothScroll>
+    <>
+      <Preloader />
+      <SmoothScroll>
+        <Navbar />
+        <Hero />
+        <StartsWithYou />
+        <DailyIntelligence />
+        <OnDemand />
+        <UnderstandsEverything />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </SmoothScroll>
+    </>
   );
 }
