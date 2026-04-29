@@ -1,29 +1,30 @@
+"use client";
+import { useEffect, useRef } from "react";
+import { animate } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import StartsWithYou from "@/components/StartsWithYou";
 import DailyIntelligence from "@/components/DailyIntelligence";
 import OnDemand from "@/components/OnDemand";
 import UnderstandsEverything from "@/components/UnderstandsEverything";
-import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
-import CTA from "@/components/CTA";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <SmoothScroll>
       <Navbar />
-      <div id="snap-root" className="snap-container">
-        <Hero />
-        <StartsWithYou />
-        <DailyIntelligence />
-        <OnDemand />
-        <UnderstandsEverything />
-        <Comparison />
-        <Testimonials />
-        <CTA />
-        <Footer />
-      </div>
-    </main>
+      <Hero />
+      <StartsWithYou />
+      <DailyIntelligence />
+      <OnDemand />
+      <UnderstandsEverything />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </SmoothScroll>
   );
 }

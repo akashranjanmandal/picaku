@@ -1,68 +1,49 @@
 "use client";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
+import Section from "./Section";
 
 export default function CTA() {
   return (
-    <section className="snap-section flex flex-col justify-center py-24 px-5 sm:px-8 lg:px-10" style={{ background: "#FAFAFA" }}>
-      <div className="w-full max-w-4xl mx-auto text-center">
-        <Reveal direction="scale">
-          <div className="rounded-[3rem] p-12 sm:p-20 relative overflow-hidden" style={{ background: "linear-gradient(150deg,#CA142B 0%,#E1614A 45%,#F7AC2C 100%)", boxShadow: "0 32px 80px rgba(225,97,74,0.22)" }}>
-            {/* Subtle overlay */}
-            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 120%, rgba(0,0,0,0.25) 0%, transparent 70%)" }} />
-
-            {/* Floating dots — match the Record button aesthetic */}
-            <div className="absolute top-8 right-10 grid grid-cols-4 gap-1.5 opacity-20">
-              {[...Array(16)].map((_, i) => (
-                <motion.div key={i} className="w-2 h-2 rounded-full bg-white"
-                  animate={{ opacity: [0.3, 1, 0.3], scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.15 }}
-                />
-              ))}
-            </div>
-
-            <div className="relative">
-              {/* Logo mark */}
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-10" style={{ background: "rgba(255,255,255,0.25)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.2)" }}>
-                <span className="text-white font-bold text-2xl">P</span>
+    <Section id="download" bg="#ffffff">
+      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}
+        style={{ borderRadius: 48, padding: "clamp(40px, 6vw, 80px)", textAlign: "center", position: "relative", overflow: "hidden", background: "linear-gradient(135deg,#E1614A,#C44A34)", boxShadow: "0 40px 80px rgba(225,97,74,0.25)", width: "100%" }}>
+        <Reveal direction="up">
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
+            <motion.div whileHover={{ rotate: 360, scale: 1.1 }} transition={{ duration: 0.8 }}
+              style={{ width: 64, height: 64, borderRadius: 18, background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,255,255,0.3)" }}>
+              <div style={{ position: "relative", width: 36, height: 36 }}>
+                <Image src="/logo.png" alt="Picaku Logo" fill className="object-contain brightness-0 invert" />
               </div>
-
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Your next conversation<br />deserves to be remembered
-              </h2>
-              <p className="text-lg sm:text-xl mb-12 max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.85)" }}>
-                Record, transcribe, summarise, and chat — completely free, always. Join 8,000+ users capturing life&apos;s best moments.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-3 font-bold px-10 py-5 rounded-2xl text-[17px] transition-all"
-                  style={{ background: "#FFFFFF", color: "#E1614A", boxShadow: "0 12px 32px rgba(0,0,0,0.18)" }}
-                >
-                  Get Started Free
-                  <ArrowRight size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.02, background: "rgba(255,255,255,0.2)" }}
-                  className="inline-flex items-center gap-2 font-bold px-10 py-5 rounded-2xl text-[17px] transition-all"
-                  style={{ background: "rgba(255,255,255,0.15)", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.3)" }}
-                >
-                  Watch Demo
-                </motion.a>
+            </motion.div>
+          </div>
+          <h2 style={{ fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 900, color: "#fff", marginBottom: 24, lineHeight: 0.95, letterSpacing: "-0.03em" }}>
+            Never forget a<br />word again.
+          </h2>
+          <p style={{ fontSize: "clamp(15px, 1.5vw, 18px)", color: "rgba(255,255,255,0.85)", maxWidth: 480, margin: "0 auto 40px", lineHeight: 1.6, fontWeight: 500 }}>
+            Capture your meetings, lectures, and ideas with the world&apos;s most accurate AI knowledge base. 100% free, forever.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 20 }}>
+            <a href="#" className="btn-minimal">
+              <span>Start Recording Free</span>
+              <ArrowRight size={18} strokeWidth={2.5} />
+            </a>
+            <a href="#" style={{ fontSize: 16, fontWeight: 900, color: "rgba(255,255,255,0.85)", textDecoration: "underline", textUnderlineOffset: 4 }}>
+              Download on iOS &amp; Android
+            </a>
+          </div>
+          <div style={{ marginTop: 40, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 32, opacity: 0.6 }}>
+            {["Unlimited Recordings", "99% Accuracy", "No Credit Card"].map(f => (
+              <div key={f} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#fff" }} />
+                <span style={{ fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.15em", color: "#fff" }}>{f}</span>
               </div>
-
-              <p className="text-sm font-bold mt-8 tracking-widest uppercase opacity-60" style={{ color: "#FFFFFF" }}>
-                iOS · Android · Web &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; No limits
-              </p>
-            </div>
+            ))}
           </div>
         </Reveal>
-      </div>
-    </section>
+      </motion.div>
+    </Section>
   );
 }

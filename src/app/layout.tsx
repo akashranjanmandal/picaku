@@ -9,14 +9,14 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Pikaku — Record. Transcribe. Never Forget.",
+  title: "Picaku — Record. Transcribe. Never Forget.",
   description: "AI-powered transcription, smart summaries, memory highlights, and AI chat for every conversation. Completely free.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${ptSans.variable} ${ptSans.className}`} style={{ background: "#FFFFFF", color: "#222222" }}>
+      <body className={`${ptSans.variable} ${ptSans.className}`} >
         {children}
       </body>
     </html>
