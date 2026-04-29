@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
@@ -43,12 +42,17 @@ export default function Preloader() {
         >
           <div style={{ position: "relative", marginBottom: 40 }}>
             {/* Logo Image */}
-            <Image
+            <img
               src="/logo.png"
               alt="Picaku"
-              width={160}
-              height={45}
-              style={{ filter: "invert(1) brightness(0)", opacity: 0.2 }}
+              style={{ 
+                width: 160, 
+                height: 45, 
+                objectFit: "contain", 
+                objectPosition: "center",
+                filter: "brightness(0)", 
+                opacity: 0.2 
+              }}
             />
 
             {/* Animated Flare Overlay */}
@@ -57,12 +61,14 @@ export default function Preloader() {
                 position: "absolute",
                 inset: 0,
                 overflow: "hidden",
-                maskImage: "url(/logo.png)",
-                WebkitMaskImage: "url(/logo.png)",
+                maskImage: "url('/logo.png')",
+                WebkitMaskImage: "url('/logo.png')",
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",
                 WebkitMaskRepeat: "no-repeat",
+                maskPosition: "center",
+                WebkitMaskPosition: "center",
               }}
             >
               <motion.div

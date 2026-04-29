@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Section from "./Section";
 
 const AppleIcon = () => (
@@ -23,7 +22,7 @@ export default function Footer() {
       >
         {/* Brand column */}
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <Image src="/logo.png" alt="Picaku Logo" width={140} height={40} className="w-auto h-10 object-contain object-left -ml-2 brightness-0 invert" />
+          <img src="/logo.png" alt="Picaku Logo" style={{ width: 'auto', height: 40, filter: 'brightness(0) invert(1)' }} className="object-contain object-left -ml-2 invert" />
           <p style={{ fontSize: 14, lineHeight: 1.6, fontWeight: 500, color: "#888", maxWidth: 300 }}>
             Picaku turns your recordings into a living knowledge base. Capture, transcribe, and chat with your memories.
           </p>

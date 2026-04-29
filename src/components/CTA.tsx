@@ -1,6 +1,5 @@
 "use client";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 import Section from "./Section";
@@ -15,7 +14,7 @@ export default function CTA() {
             <motion.div whileHover={{ rotate: 360, scale: 1.1 }} transition={{ duration: 0.8 }}
               style={{ width: 64, height: 64, borderRadius: 18, background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,255,255,0.3)" }}>
               <div style={{ position: "relative", width: 36, height: 36 }}>
-                <Image src="/logo.png" alt="Picaku Logo" fill className="object-contain brightness-0 invert" />
+                <img src="/logo.png" alt="Picaku Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
               </div>
             </motion.div>
           </div>

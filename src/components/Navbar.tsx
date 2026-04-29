@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 const AppleIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -76,8 +75,17 @@ export default function Navbar() {
           }`}
       >
         {/* Left: Logo Image */}
-        <a href="#" className="flex items-center group" style={{ textDecoration: "none" }}>
-          <Image src="/logo.png" alt="Picaku Logo" width={110} height={30} style={{ objectFit: "contain", filter: "invert(1) brightness(0) contrast(1000%)" }} />
+        <a href="/" className="flex items-center group" style={{ textDecoration: "none" }}>
+          <img 
+            src="/logo.png" 
+            alt="Picaku Logo" 
+            style={{ 
+              width: 110,
+              height: 30,
+              objectFit: "contain", 
+              filter: scrolled ? "brightness(0)" : "brightness(0) opacity(0.8)" 
+            }} 
+          />
         </a>
 
         {/* Center: Desktop Navigation */}
