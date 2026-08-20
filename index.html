@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picaku — Record. Transcribe. Never Forget.</title>
+<meta name="description" content="AI-powered transcription, smart summaries, memory highlights, and AI chat for every conversation. Completely free.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-logo-wrap">
+    <img src="assets/logo.png" alt="Picaku">
+    <div class="preloader-flare-mask">
+      <div class="preloader-flare"></div>
+    </div>
+  </div>
+  <div class="waveform">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<div id="navbar-wrap">
+  <nav id="navbar">
+    <a href="/" class="navbar-logo">
+      <img src="assets/logo.png" alt="Picaku Logo">
+    </a>
+
+    <div class="navbar-links">
+      <a href="#features">Features</a>
+      <a href="#intelligence">Intelligence</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="store-badges">
+        <a href="#" class="store-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5C3.94 21.8 3 21.33 3 20.5z"/></svg>
+          <div>
+            <span class="sub">Get it on</span>
+            <span class="label">Play Store</span>
+          </div>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E1614A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a href="#features">Features</a>
+      <a href="#intelligence">Intelligence</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+    <div class="mobile-store-badges">
+      <a href="#" class="store-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div>
+          <span class="sub">Download on</span>
+          <span class="label">App Store</span>
+        </div>
+      </a>
+      <a href="#" class="store-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5C3.94 21.8 3 21.33 3 20.5z"/></svg>
+        <div>
+          <span class="sub">Get it on</span>
+          <span class="label">Play Store</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="section" style="background:#ffffff">
+  <div class="hero-blobs">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+  </div>
+  <div class="section-inner" style="max-width:800px;text-align:center;position:relative;z-index:1">
+    <div class="reveal reveal-up is-visible">
+      <h1 style="font-size:clamp(40px,7vw,72px);font-weight:900;line-height:0.95;margin-bottom:24px;letter-spacing:-0.03em;color:#222222">
+        Record. Transcribe.<br>
+        <span class="shimmer-text">Never Forget.</span>
+      </h1>
+      <p style="font-size:clamp(16px,2vw,20px);max-width:560px;margin:0 auto 40px;line-height:1.6;font-weight:500;color:#444444">
+        Picaku turns every meeting, lecture, and voice note into accurate transcripts, smart summaries, and a searchable knowledge base you can chat with.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;margin-bottom:40px">
+        <a href="#" class="btn-minimal">
+          <span>Start Recording Free</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Starts With You / Features -->
+<section id="features" class="section" style="background:#F9FAFB">
+  <div class="section-inner">
+    <div class="reveal reveal-up" style="text-align:center;margin-bottom:32px">
+      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-0.03em;color:#222;margin-bottom:12px">
+        Add anything to your <span style="color:#E1614A">memory</span>
+      </h2>
+      <p style="font-size:clamp(15px,1.5vw,18px);max-width:520px;margin:0 auto;color:#555;line-height:1.6">
+        Whether it's live speech, a link from the web, or a quick typed note — Picaku handles it all.
+      </p>
+    </div>
+
+    <div class="grid-auto">
+      <div class="reveal reveal-up">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:900;color:#222;margin-bottom:8px;letter-spacing:-0.02em">Record</h3>
+          <p style="font-size:14px;line-height:1.6;color:#555;margin-bottom:16px;flex:1">Tap record and speak. Picaku captures every word live with noise suppression, auto speaker-separation, and real-time transcription — on iOS, Android, or Web.</p>
+          <div class="feature-box">
+            <div class="bar-row">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-size:11px;font-weight:700;color:#444">Quiet Room</span>
+                <span style="font-size:11px;font-weight:900;color:#E1614A">99%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="--fill:99%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-size:11px;font-weight:700;color:#444">Coffee Shop</span>
+                <span style="font-size:11px;font-weight:900;color:#E1614A">92%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="--fill:92%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-size:11px;font-weight:700;color:#444">Lecture Hall</span>
+                <span style="font-size:11px;font-weight:900;color:#E1614A">95%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <span style="font-size:11px;font-weight:700;color:#444">Street Noise</span>
+                <span style="font-size:11px;font-weight:900;color:#E1614A">88%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="--fill:88%"></div></div>
+            </div>
+            <p style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;opacity:0.4;color:#222;margin-top:8px">Transcription accuracy across environments</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-up" style="transition-delay:0.1s">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:900;color:#222;margin-bottom:8px;letter-spacing:-0.02em">Add a Link</h3>
+          <p style="font-size:14px;line-height:1.6;color:#555;margin-bottom:16px;flex:1">Paste any URL — article, YouTube video, research paper, or webpage. Picaku fetches and reads the full content so you can chat with it and get instant insights.</p>
+          <div class="feature-box">
+            <div class="bullet-row"><span class="bullet-check">✓</span><span style="font-size:14px;font-weight:600;color:#444">Articles &amp; blogs</span></div>
+            <div class="bullet-row"><span class="bullet-check">✓</span><span style="font-size:14px;font-weight:600;color:#444">YouTube videos</span></div>
+            <div class="bullet-row"><span class="bullet-check">✓</span><span style="font-size:14px;font-weight:600;color:#444">Research papers</span></div>
+            <div class="bullet-row" style="margin-bottom:0"><span class="bullet-check">✓</span><span style="font-size:14px;font-weight:600;color:#444">Any webpage</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-up" style="transition-delay:0.2s">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:900;color:#222;margin-bottom:8px;letter-spacing:-0.02em">Write a Note</h3>
+          <p style="font-size:14px;line-height:1.6;color:#555;margin-bottom:16px;flex:1">Type freeform notes or paste any text. Everything lands in your Memory Vault — auto-tagged, timestamped, and available for AI chat and memory search instantly.</p>
+          <div class="quote-box">
+            <p style="font-size:14px;font-style:italic;line-height:1.6;color:#444">"Launch date moved to Oct 15 — confirm with design team before Thursday." — saved, searchable, forever.</p>
+            <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.1em;color:#E1614A;margin-top:8px">Memory highlight</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Daily Intelligence -->
+<section id="intelligence" class="section" style="background:#FFFBF8">
+  <div class="section-inner">
+    <div class="grid-2col">
+      <div>
+        <div class="reveal reveal-right">
+          <h2 style="font-size:clamp(26px,3.5vw,46px);font-weight:900;letter-spacing:-0.03em;color:#222;margin-bottom:12px">
+            recording to <span style="color:#E1614A">insight</span> in minutes
+          </h2>
+        </div>
+        <div class="step-list">
+          <div class="reveal reveal-right">
+            <button class="step-btn active" data-step="0">
+              <div class="step-row">
+                <div class="step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+                <div style="flex:1">
+                  <h3 class="step-title">Tap Record</h3>
+                  <p class="step-desc">Open Picaku and hit Record. Works for meetings, phone calls, lectures, and voice notes — on iOS, Android, or desktop. Speaker detection separates voices automatically.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="reveal reveal-right" style="transition-delay:0.08s">
+            <button class="step-btn" data-step="1">
+              <div class="step-row">
+                <div class="step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <div style="flex:1">
+                  <h3 class="step-title">AI Transcribes in Seconds</h3>
+                  <p class="step-desc">The moment you stop, Pikaku's AI delivers a word-for-word transcript with punctuation, paragraph breaks, and speaker labels. No manual clean-up needed.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="reveal reveal-right" style="transition-delay:0.16s">
+            <button class="step-btn" data-step="2">
+              <div class="step-row">
+                <div class="step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <div style="flex:1">
+                  <h3 class="step-title">Smart Summary &amp; Notes</h3>
+                  <p class="step-desc">An AI-generated summary with key points, decisions, and action items is ready instantly. Add your own timestamped text notes right alongside the transcript.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="reveal reveal-right" style="transition-delay:0.24s">
+            <button class="step-btn" data-step="3">
+              <div class="step-row">
+                <div class="step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                <div style="flex:1">
+                  <h3 class="step-title">Chat with Your Memory</h3>
+                  <p class="step-desc">Ask Picaku anything about your recording. 'What were the action items?' 'What did Sarah say about the deadline?' Precise answers, instantly.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-left">
+        <div style="position:relative">
+          <div class="mock-card">
+            <div class="mock-titlebar">
+              <div class="mock-dots">
+                <span class="mock-dot" style="background:#FF5F57"></span>
+                <span class="mock-dot" style="background:#FEBC2E"></span>
+                <span class="mock-dot" style="background:#28C840"></span>
+              </div>
+              <div class="rec-badge">
+                <span class="rec-dot"></span>
+                <span style="font-size:12px;font-weight:900;color:#E1614A">RECORDING · 1:02</span>
+              </div>
+              <span style="font-size:12px;font-weight:900;color:#888">Product Sync</span>
+            </div>
+            <div class="mock-tabs">
+              <span class="mock-tab active" style="background:#fff">Transcript</span>
+              <span class="mock-tab">Chats</span>
+              <span class="mock-tab">Summary</span>
+            </div>
+            <div class="mock-lines">
+              <div class="mock-line">
+                <span class="speaker-tag">Alex</span>
+                <p style="font-size:13px;flex:1;line-height:1.5;color:#222">So the launch is confirmed for October 15th, right?</p>
+                <span style="font-size:11px;flex-shrink:0;opacity:0.3;color:#222">0:42</span>
+              </div>
+              <div class="mock-line">
+                <span class="speaker-tag">Mia</span>
+                <p style="font-size:13px;flex:1;line-height:1.5;color:#222">Yes — but we need design sign-off before Thursday or we push to the 22nd.</p>
+                <span style="font-size:11px;flex-shrink:0;opacity:0.3;color:#222">0:47</span>
+              </div>
+              <div class="mock-line">
+                <span class="speaker-tag">Alex</span>
+                <p style="font-size:13px;flex:1;line-height:1.5;color:#222">Got it. I'll follow up with the design team today.</p>
+                <span style="font-size:11px;flex-shrink:0;opacity:0.3;color:#222">0:53</span>
+              </div>
+              <div class="mock-line highlight">
+                <span class="speaker-tag">Sam</span>
+                <p style="font-size:13px;flex:1;line-height:1.5;color:#222">Backend is ready. Just waiting on the API keys from the client.</p>
+                <span style="font-size:11px;flex-shrink:0;opacity:0.3;color:#222">1:02</span>
+              </div>
+              <div class="ai-detect">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E1614A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"/></svg>
+                  <p style="font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:0.05em;color:#E1614A">AI Intelligence Detected</p>
+                </div>
+                <p style="font-size:12px;font-weight:500;color:#555">· Design sign-off — <strong style="color:#222">Alex</strong> · Due Thursday</p>
+                <p style="font-size:12px;font-weight:500;color:#555;margin-top:4px">· API keys from client — <strong style="color:#222">Sam</strong> · Pending</p>
+              </div>
+            </div>
+          </div>
+          <div class="floating-badge">
+            <div style="width:32px;height:32px;border-radius:10px;background:#FFF3ED;display:flex;align-items:center;justify-content:center;font-size:16px">⚡</div>
+            <div>
+              <p style="font-size:12px;font-weight:700;color:#222">Instant Analysis</p>
+              <p style="font-size:10px;color:#9E9E9E">ready in seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- On Demand -->
+<section id="use-cases" class="section" style="background:#F7F9FF">
+  <div class="section-inner">
+    <div class="grid-2col">
+      <div>
+        <div class="reveal reveal-right">
+          <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:900;color:#E1614A;background:rgba(225,97,74,0.1);border:1px solid rgba(225,97,74,0.2);margin-bottom:16px">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Insights from Memories
+          </div>
+          <h2 style="font-size:clamp(26px,3.5vw,46px);font-weight:900;letter-spacing:-0.03em;color:#222;margin-bottom:12px">
+            Chat with your entire <span style="color:#E1614A">memory</span>
+          </h2>
+          <p style="font-size:clamp(15px,1.5vw,18px);color:#555;line-height:1.6;margin-bottom:20px">Ask Picaku anything — across all your recordings, notes, and links. It finds the answer instantly.</p>
+        </div>
+        <div class="reveal reveal-right" style="transition-delay:0.1s">
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E;margin-bottom:12px">Try asking:</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="question-btn active" data-q="What were the action items?">
+              <span class="qicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+              What were the action items?
+            </button>
+            <button class="question-btn" data-q="Summarise my last 3 meetings">
+              <span class="qicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+              Summarise my last 3 meetings
+            </button>
+            <button class="question-btn" data-q="What did we decide about the launch?">
+              <span class="qicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+              What did we decide about the launch?
+            </button>
+            <button class="question-btn" data-q="What should I follow up on?">
+              <span class="qicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+              What should I follow up on?
+            </button>
+            <button class="question-btn" data-q="Find notes about API keys">
+              <span class="qicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></span>
+              Find notes about API keys
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-left">
+        <div style="position:relative">
+          <div class="chat-mock">
+            <div style="display:flex;gap:6px;padding:14px 20px;background:#FDFDFD;border-bottom:1px solid rgba(0,0,0,0.06)">
+              <span class="mock-dot" style="background:#FF5F57"></span>
+              <span class="mock-dot" style="background:#FEBC2E"></span>
+              <span class="mock-dot" style="background:#28C840"></span>
+            </div>
+            <div style="padding:20px;display:flex;flex-direction:column;gap:16px;background:#fff">
+              <div style="display:flex;justify-content:flex-end">
+                <div id="chat-user-q" class="chat-bubble-user">What were the action items?</div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px">
+                <div style="flex-shrink:0;padding-top:4px">
+                  <img src="assets/logo.png" alt="Picaku" style="height:18px;width:auto;object-fit:contain">
+                </div>
+                <div style="flex:1">
+                  <div id="chat-ai-a" class="chat-bubble-ai">
+                    <p style="font-size:14px;line-height:1.5;margin-top:0">Two action items found:</p>
+                    <p style="font-size:14px;line-height:1.5;margin-top:6px">· Follow up with design team — due Thursday (Alex)</p>
+                    <p style="font-size:14px;line-height:1.5;margin-top:6px">· Collect API keys from client — pending (Sam)</p>
+                  </div>
+                  <p id="chat-tag" class="chat-tag">From: Team Standup · Oct 3</p>
+                </div>
+              </div>
+            </div>
+            <div style="padding:0 20px 16px">
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;background:#FAFAFA;border:1px solid rgba(225,97,74,0.2)">
+                <span style="flex:1;font-size:14px;color:#C0C0C0">Ask about your memories…</span>
+                <div style="width:32px;height:32px;border-radius:8px;background:#E1614A;display:flex;align-items:center;justify-content:center;cursor:pointer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Understands Everything -->
+<section id="capabilities" class="section" style="background:#F9FAFB">
+  <div class="section-inner">
+    <div class="grid-2col">
+      <div>
+        <div class="reveal reveal-right">
+          <h2 style="font-size:clamp(26px,3.5vw,46px);font-weight:900;letter-spacing:-0.03em;color:#222;margin-bottom:12px">
+            Understands <span style="color:#E1614A">everything</span> you capture
+          </h2>
+        </div>
+        <div class="step-list">
+          <div class="reveal reveal-right">
+            <button class="step-btn active" data-card="link">
+              <div class="step-row">
+                <div class="step-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                <div style="flex:1">
+                  <div style="display:flex;align-items:center;justify-content:space-between">
+                    <div>
+                      <h3 class="step-title" style="font-weight:700;font-size:16px">Discuss Any Link</h3>
+                      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E;margin-top:2px">Articles · Videos · Papers</p>
+                    </div>
+                    <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transition:transform 0.25s"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                  <p class="step-desc">Paste any URL and Picaku reads the full content. Ask questions, get summaries, and extract key insights from any article, YouTube video, or research paper.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="reveal reveal-right" style="transition-delay:0.08s">
+            <button class="step-btn" data-card="highlight">
+              <div class="step-row">
+                <div class="step-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div style="flex:1">
+                  <div style="display:flex;align-items:center;justify-content:space-between">
+                    <div>
+                      <h3 class="step-title" style="font-weight:700;font-size:16px">Memory Highlights</h3>
+                      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E;margin-top:2px">Saved · Searchable · Forever</p>
+                    </div>
+                    <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transition:transform 0.25s"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                  <p class="step-desc">Tap any line in a transcript to save it as a Memory Highlight. Your best insights are pinned, searchable, and ready to reference across any future conversation.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="reveal reveal-right" style="transition-delay:0.16s">
+            <button class="step-btn" data-card="notes">
+              <div class="step-row">
+                <div class="step-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                <div style="flex:1">
+                  <div style="display:flex;align-items:center;justify-content:space-between">
+                    <div>
+                      <h3 class="step-title" style="font-weight:700;font-size:16px">Text Notes</h3>
+                      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E;margin-top:2px">Type · Paste · Save</p>
+                    </div>
+                    <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transition:transform 0.25s"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                  <p class="step-desc">Write freeform notes or paste any text directly. Everything lands in your Memory Vault — auto-tagged, timestamped, and fully searchable with AI chat.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-left">
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(225,97,74,0.18);box-shadow:0 12px 40px rgba(225,97,74,0.1)">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08)">
+            <div style="display:flex;gap:6px">
+              <span class="mock-dot" style="width:14px;height:14px;background:#FF5F57"></span>
+              <span class="mock-dot" style="width:14px;height:14px;background:#FEBC2E"></span>
+              <span class="mock-dot" style="width:14px;height:14px;background:#28C840"></span>
+            </div>
+            <span id="capability-title" style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#E1614A">Discuss Any Link</span>
+            <div style="width:56px"></div>
+          </div>
+          <div style="padding:20px;background:#fff">
+            <div data-preview="link" style="display:block">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+                <div style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;background:#E1614A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                <div>
+                  <p style="font-size:14px;font-weight:700;color:#222">Discuss Any Link</p>
+                  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E">Articles · Videos · Papers</p>
+                </div>
+              </div>
+              <div style="background:#F7F7F7;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;align-items:center;gap:8px;padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(225,97,74,0.15)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E1614A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <span style="font-size:12px;font-weight:700;color:#5A5A5A">youtube.com/watch?v=abc123</span>
+                </div>
+                <div style="padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(0,0,0,0.06)">
+                  <p style="font-size:11px;font-weight:700;color:#E1614A;margin-bottom:4px">✨ AI Summary</p>
+                  <p style="font-size:12px;line-height:1.5;color:#5A5A5A">This video covers key principles of machine learning — from supervised learning to neural networks.</p>
+                </div>
+              </div>
+            </div>
+
+            <div data-preview="highlight" style="display:none">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+                <div style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;background:#E1614A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div>
+                  <p style="font-size:14px;font-weight:700;color:#222">Memory Highlights</p>
+                  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E">Saved · Searchable · Forever</p>
+                </div>
+              </div>
+              <div style="background:#F7F7F7;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px">
+                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(225,97,74,0.25)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="#E1614A" stroke="#E1614A" stroke-width="2" style="flex-shrink:0;margin-top:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <p style="font-size:12px;flex:1;line-height:1.5;color:#222">Launch confirmed for Oct 15 — pending design sign-off.</p>
+                  <span style="font-size:12px;flex-shrink:0;color:#C0C0C0">0:42</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(225,97,74,0.25)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="#E1614A" stroke="#E1614A" stroke-width="2" style="flex-shrink:0;margin-top:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <p style="font-size:12px;flex:1;line-height:1.5;color:#222">API keys still waiting on the client.</p>
+                  <span style="font-size:12px;flex-shrink:0;color:#C0C0C0">1:02</span>
+                </div>
+              </div>
+            </div>
+
+            <div data-preview="notes" style="display:none">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+                <div style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;background:#E1614A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                <div>
+                  <p style="font-size:14px;font-weight:700;color:#222">Text Notes</p>
+                  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#9E9E9E">Type · Paste · Save</p>
+                </div>
+              </div>
+              <div style="background:#F7F7F7;border-radius:12px;padding:16px">
+                <div style="padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(225,97,74,0.15)">
+                  <p style="font-size:12px;line-height:1.5;font-style:italic;color:#5A5A5A">"Launch date moved to Oct 15 — confirm with design team before Thursday. Sam handling API keys from client side."</p>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px">
+                    <span style="font-size:11px;color:#9E9E9E">Oct 3, 2025 · 2:14 PM</span>
+                    <span style="font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(225,97,74,0.09);color:#E1614A">Saved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="section" style="background:#FFF5F3;min-height:unset;padding-top:clamp(60px,8vh,100px);padding-bottom:clamp(60px,8vh,100px)">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, #E1614A, transparent 70%);opacity:0.04;animation:float-alt 18s ease-in-out infinite"></div>
+  </div>
+
+  <div class="section-inner">
+    <div class="reveal reveal-up" style="text-align:center;margin-bottom:40px">
+      <h2 style="font-size:clamp(26px,3.5vw,46px);font-weight:900;letter-spacing:-0.03em;color:#222;margin-bottom:8px">
+        Loved by <span style="color:#E1614A">8,000+ users</span>
+      </h2>
+    </div>
+  </div>
+
+  <div style="width:100vw;margin-left:calc(50% - 50vw);display:flex;flex-direction:column;gap:16px;overflow:hidden">
+    <div style="position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to right, #FFF5F3 0%, transparent 8%, transparent 92%, #FFF5F3 100%)"></div>
+
+    <div class="marquee-l" style="display:flex;width:max-content">
+      <!-- testimonials duplicated for infinite scroll illusion -->
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">I used to spend 45 minutes writing meeting notes after every call. With Picaku I get a perfect summary the second the call ends. It's genuinely changed how I work.</p><div><p style="font-size:13px;font-weight:700;color:#222">Sarah Chen</p><p style="font-size:11px;font-weight:500;color:#888">Product Manager</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">The 'chat with your recording' feature is unlike anything I've seen. I asked Picaku what a client said about pricing three weeks ago — it found the exact moment instantly.</p><div><p style="font-size:13px;font-weight:700;color:#222">Marcus Lee</p><p style="font-size:11px;font-weight:500;color:#888">Sales Director</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">As a researcher, I record dozens of interviews a month. Pikaku's memory highlights mean I can actually find that one quote I remember hearing months ago.</p><div><p style="font-size:13px;font-weight:700;color:#222">Dr. Priya Nair</p><p style="font-size:11px;font-weight:500;color:#888">UX Researcher</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">I pasted a 40-page research paper link and asked Picaku to compare it to my last three customer interviews. The synthesis it gave me was mind-blowing.</p><div><p style="font-size:13px;font-weight:700;color:#222">James Wright</p><p style="font-size:11px;font-weight:500;color:#888">Founder</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">Lectures, office hours, study groups — I record everything and Picaku handles the rest. My GPA went up a full point since I started using it.</p><div><p style="font-size:13px;font-weight:700;color:#222">Aisha Okafor</p><p style="font-size:11px;font-weight:500;color:#888">Graduate Student</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">We replaced Otter.ai and Fireflies combined with just Pikaku. The AI summary and chat features alone justify the entire cost of the team plan.</p><div><p style="font-size:13px;font-weight:700;color:#222">David Park</p><p style="font-size:11px;font-weight:500;color:#888">CTO</p></div></div>
+
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">I used to spend 45 minutes writing meeting notes after every call. With Picaku I get a perfect summary the second the call ends. It's genuinely changed how I work.</p><div><p style="font-size:13px;font-weight:700;color:#222">Sarah Chen</p><p style="font-size:11px;font-weight:500;color:#888">Product Manager</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">The 'chat with your recording' feature is unlike anything I've seen. I asked Picaku what a client said about pricing three weeks ago — it found the exact moment instantly.</p><div><p style="font-size:13px;font-weight:700;color:#222">Marcus Lee</p><p style="font-size:11px;font-weight:500;color:#888">Sales Director</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">As a researcher, I record dozens of interviews a month. Pikaku's memory highlights mean I can actually find that one quote I remember hearing months ago.</p><div><p style="font-size:13px;font-weight:700;color:#222">Dr. Priya Nair</p><p style="font-size:11px;font-weight:500;color:#888">UX Researcher</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">I pasted a 40-page research paper link and asked Picaku to compare it to my last three customer interviews. The synthesis it gave me was mind-blowing.</p><div><p style="font-size:13px;font-weight:700;color:#222">James Wright</p><p style="font-size:11px;font-weight:500;color:#888">Founder</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">Lectures, office hours, study groups — I record everything and Picaku handles the rest. My GPA went up a full point since I started using it.</p><div><p style="font-size:13px;font-weight:700;color:#222">Aisha Okafor</p><p style="font-size:11px;font-weight:500;color:#888">Graduate Student</p></div></div>
+      <div class="testimonial-card"><div class="testimonial-quote-mark">&ldquo;</div><p style="font-size:13px;line-height:1.65;font-weight:500;color:#5A5A5A;margin-bottom:16px">We replaced Otter.ai and Fireflies combined with just Pikaku. The AI summary and chat features alone justify the entire cost of the team plan.</p><div><p style="font-size:13px;font-weight:700;color:#222">David Park</p><p style="font-size:11px;font-weight:500;color:#888">CTO</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="site-footer" class="section section-footer">
+  <div class="section-inner">
+    <div class="footer-bottom">
+      <p style="font-size:13px;font-weight:600;color:#555">© 2026 Picaku AI. All rights reserved.</p>
+      <div style="display:flex;gap:24px">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
