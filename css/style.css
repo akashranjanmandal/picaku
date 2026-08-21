@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../font/GoogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype-variations'),
+       url('../font/GoogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../font/GoogleSans-Italic-VariableFont_GRAD,opsz,wght.ttf') format('truetype-variations'),
+       url('../font/GoogleSans-Italic-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --color-primary: #E1614A;
@@ -12,7 +28,7 @@
   --color-text-1: #222222;
   --color-text-2: #5A5A5A;
   --color-text-3: #9E9E9E;
-  --font-sans: 'PT Sans', system-ui, sans-serif;
+  --font-sans: 'Google Sans', system-ui, sans-serif;
 }
 
 *, *::before, *::after {
